@@ -1,5 +1,4 @@
 /* Global styles */
-/* This can be used to give comment */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,11 +38,13 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav li {
-  display: inline-block;
-  margin-right: 20px;
+  margin: 0 10px;
 }
 
 nav a {
@@ -96,12 +97,15 @@ footer {
 /* Responsive styles */
 @media screen and (max-width: 767px) {
   h1.name {
-    font-size: 20px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   nav li {
     display: block;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   main section {
@@ -109,13 +113,45 @@ footer {
   }
 
   main section h2 {
-    font-size: 24px;
-    text-indent: 50px;
+    font-size: 28px;
+    text-indent: 0;
+    text-align: center;
   }
 
   .profile-image {
     width: 100px;
     height: 100px;
+  }
+
+  section#NumberedContent ol {
+    margin-left: 30px;
+  }
+
+  section#NumberedContent ul {
+    margin-left: 30px;
+  }
+
+  #gallery {
+    padding: 20px;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item img {
+    width: 100%;
+  }
+
+  .caption {
+    position: relative;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+    text-align: center;
   }
 }
 
@@ -134,7 +170,7 @@ section#NumberedContent ul {
 
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
 
@@ -149,8 +185,6 @@ section#NumberedContent ul {
   display: block;
   transition: transform 0.3s ease;
 }
-
-
 
 #back-to-top {
   position: fixed;
@@ -210,19 +244,5 @@ section#NumberedContent ul {
 #home img {
   max-width: 100%;
   max-height: 100%;
-}
-
-
-<style>
-div.a {
-  text-indent: 30px;
-}
-
-div.b {
-  text-indent: 60px;
-}
-
-div.c {
-  text-indent: 30%;
 }
 
