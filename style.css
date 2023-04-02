@@ -95,7 +95,7 @@ footer {
 /* Responsive styles */
 @media screen and (max-width: 767px) {
   h1.name {
-    font-size: 36px;
+    font-size: 20px;
   }
 
   nav li {
@@ -109,6 +109,7 @@ footer {
 
   main section h2 {
     font-size: 24px;
+    text-indent: 50px;
   }
 
   .profile-image {
@@ -117,6 +118,132 @@ footer {
   }
 }
 
-section#publications ol {
-  margin-left: 20px;
+section#NumberedContent ol {
+  margin-left: 40px;
 }
+
+section#NumberedContent ul {
+  margin-left: 40px;
+}
+
+
+#gallery {
+  padding: 40px 20px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 70%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/*
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover figcaption {
+  opacity: 1;
+}
+*/
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#back-to-top:hover {
+  background-color: #555;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+#home img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+<style>
+div.a {
+  text-indent: 30px;
+}
+
+div.b {
+  text-indent: 60px;
+}
+
+div.c {
+  text-indent: 30%;
+}
+
