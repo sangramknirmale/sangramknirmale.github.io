@@ -39,6 +39,9 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+text-transform: uppercase;
+font-weight: bold;
+
 }
 
 nav li a {
