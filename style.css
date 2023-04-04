@@ -10,16 +10,75 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
+
+
+nav {
+  background-color: #f2f2f2;  /* #f2f2f2 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: 1px solid #ccc;
+}
+
+/* CSS for the hover effect */
+nav li a:hover {
+  background-color: #ddd;
+}
+nav li a:hover i:before {
+  content: "\f1b2"; /* This is the code for the alternate icon */
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 600px) {
+  nav li {
+    width: 100%;
+    border-right: none;
+  }
+  
+  nav li:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  nav li a {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+  }
+}
+
 
 header {
   background-color: #333;
@@ -34,28 +93,7 @@ h1.name {
   letter-spacing: 2px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 10px;
-  padding: 0;
-}
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 14px;
-}
-
-nav a:hover {
-  border-bottom: 2px solid #fff;
-}
 
 main section {
   padding: 40px 20px;
