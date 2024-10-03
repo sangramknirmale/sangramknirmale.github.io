@@ -149,10 +149,6 @@ footer {
 }
 
 
-
-
-
-
 /* Home content styles */
 .home-content {
     display: flex; /* Use flexbox layout */
@@ -170,3 +166,38 @@ footer {
 .text-content {
     flex: 1; /* Allow the text content to take up the remaining space */
 }
+
+
+.student {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.student-photo {
+    width: 100px; /* Adjust according to your needs */
+    height: 100px; /* Adjust according to your needs */
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.student-info {
+    max-width: 600px; /* Adjust according to your layout */
+}
+
+h4 {
+    margin: 0; /* Ensures no extra space around headings */
+    font-size: 18px; /* Adjust font size */
+}
+
+p {
+    margin: 5px 0; /* Adds space between paragraphs */
+    font-size: 14px; /* Adjust text size for readability */
+}
+
+h2, h3 {
+    font-size: 24px; /* Adjust for headings */
+    margin-bottom: 10px; /* Adds space below headings */
+}
+
+
