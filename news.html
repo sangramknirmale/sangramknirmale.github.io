@@ -1,0 +1,458 @@
+<!doctype html>
+<html class="no-js no-svg" lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="jquery.min.js?ver=6.7.2" id="jquery-js"></script>
+    <link rel='stylesheet' id='wp-block-library-css' href='style.min.css' type='text/css' media='all' />
+    <link type="text/css" media="screen" href="stylesheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Sangram Krishna Nirmale IIT Bombay</title>
+
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .news-events-section {
+            padding: 80px 20px;
+            background-color: #ffffff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #718096;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* News/Events Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Image Carousel Styles */
+        .card-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image-carousel {
+            position: relative;
+            height: 100%;
+        }
+
+        .carousel-item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            object-fit: cover;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .card-date {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            font-weight: 600;
+            color: #2d3748;
+            z-index: 1;
+        }
+
+        /* Content Styles */
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-category {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .news {
+            background: #bee3f8;
+            color: #2b6cb0;
+        }
+
+        .event {
+            background: #fed7d7;
+            color: #c53030;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            color: #718096;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .card-location {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .read-more {
+            text-decoration: none;
+            color: #4299e1;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #3182ce;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+  
+</head>
+<body class="people-template-default single single-people postid-2576 wp-embed-responsive tribe-no-js tribe-theme-aero-astro" data-template="base.twig">
+
+    <header class="header">
+        <div class="header__wrapper">
+            <!-- sticky-nav -->
+            <div id="sticky-main-nav" class="main-nav--wrapper d-none d-lg-block">
+                      <!-- main-nav -->
+                <div class="container">
+                    <div class="row1">
+                        <div class="col-12">
+                            <nav id="main-nav" class="navbar navbar-expand-lg main-nav" role="navigation">
+                                <a class="navbar-brand"  target="_blank" href="https://www.iitb.ac.in/"><span class="sr-only">IIT Bombay</span></a>
+                                <ul>
+                                    <li class="has-submenu level-1"><a href="index.html"><h2>Home</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="index.html#section1"><h2>About</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="index.html#section3"><h2>Publications</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="index.html#section9"><h2>Teaching</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="index.html#section6"><h2>Achievements</h2></a>
+                                    </li>                                   
+
+                                    <li class="has-submenu level-1"><a href="index.html#section5"><h2>Team</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="index.html#section4"><h2>Outreach</h2></a>
+                                    </li>
+
+
+                                    <li class="has-submenu level-1"><a href="index.html#section2"><h2>Project</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="gallery.html"><h2>Gallery</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="news.html"><h2>News</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="joinUs.html"><h2>Join Us</h2></a>
+                                    </li>
+
+                                    <li class="has-submenu level-1"><a href="index.html#section7"><h2>Contact</h2></a>
+                                    </li>
+                                
+                                
+                        
+                                                                                                  
+                                    <li></li>
+                                    
+
+                                    <li class="list-inline-item mx-0">
+                                        <a href="https://www.linkedin.com/in/sangram-nirmale/" target="_blank">
+                                          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="28">
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list-inline-item mx-1">
+                                        <a href="https://scholar.google.co.in/citations?user=CEZSh60AAAAJ&hl=en" target="_blank">
+                                          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" width="28">
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="list-inline-item mx-0">
+                                         <a href="https://www.researchgate.net/profile/Sangram-Nirmale" target="_blank">
+                                          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" width="28">
+                                        </a>
+                                      </li>
+
+                                      <li class="list-inline-item mx-1">
+                                        <a href="https://orcid.org/0000-0001-7930-8195" target="_blank">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" width="28">
+                                        </a>
+                                    </li>      
+                                </ul>       
+                            </nav>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  mobile-nav -->
+            <div class="navbar navbar--mobile navbar-expand-lg d-lg-none">
+                <a class="navbar-brand custom-logo-link"  target="_blank" href="https://www.iitb.ac.in/" rel="home"><span class="sr-only">IIT Bombay</span></a>
+                <button class="navbar-toggler collapsed menu-btn" id="navbar-toggler" data-target="#mobile-navigation" aria-controls="mobile-navigation" aria-label="Toggle navigation">
+						    <span class="menu-btn__line"></span>
+						    <span class="menu-btn__line"></span>
+						    <span class="menu-btn__line"></span>
+						    <span class="menu-btn__line"></span>
+						    <span class="menu-btn__close"></span>
+				</button>
+            </div>
+            <div id="mobile-navigation" class="mobile-navigation d-lg-none">
+                <div class="mobile-menu-wrapper">
+                    <div class="mobile-menu-wrapper__main-nav">
+                        <ul class="navbar-nav mobile-menu">
+                                <li class="has-submenu"><a href="index.html"><h2>Home</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="index.html#section1"><h2>About</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="index.html#section3"><h2>Publications</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="index.html#section9"><h2>Teaching</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="index.html#section6"><h2>Achievements</h2></a>
+                                </li>                                   
+
+                                <li class="has-submenu"><a href="index.html#section5"><h2>Team</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="index.html#section4"><h2>Outreach</h2></a>
+                                </li>
+
+
+                                <li class="has-submenu"><a href="index.html#section2"><h2>Project</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="gallery.html"><h2>Gallery</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="news.html"><h2>News</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="joinUs.html"><h2>Join Us</h2></a>
+                                </li>
+
+                                <li class="has-submenu"><a href="index.html#section7"><h2>Contact</h2></a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </header>
+
+
+    <section id="content" role="main" class="content-wrapper"><br>
+        <section class="news-events-section">
+            <div class="section-header">
+                <h2 class="section-title"><strong>News & Events</strong></h2>    
+            </div>
+    
+            <div class="news-grid">
+                <!-- News Card 1 -->
+                <article class="news-card">
+                    <div class="card-image">
+                        <div class="card-image-carousel">
+                            <img src="image7.3.jpg" alt="News image1" class="carousel-item active">
+                        </div> 
+                        <span class="card-date">5 APR 2025</span>   
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category news">News</span>
+                        <p class="card-excerpt">Prof. Sangram Krishna Nimale, from the Department of Civil Engineering, Indian Institute of Technology Bombay received Prime Minister Early Career Research Grant by Anusandhaan National Research Fellowship (ANRF) in 2025.</p>
+                        <div class="card-meta">
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> IIT bombay, Maharashtra</span>
+                        </div>
+                    </div>
+                </article>
+    
+                <!-- Event Card 2 -->
+                <article class="news-card">
+                    <div class="card-image">
+                        <div class="card-image-carousel">
+                            <img src="image5.jpg" alt="Event image1" class="carousel-item active">
+                            <img src="image5.1.jpeg" alt="News image2" class="carousel-item">
+                            <img src="image5.2.jpg" alt="News image3" class="carousel-item">
+                        </div>
+                        <span class="card-date">5 FEB 2025</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-category event">Event</span>
+                        <p class="card-excerpt">Organized a workshop on OpenPaths AGENT on 5 February 2025, an insightful session by Gaurav Vyas, Product Manager at Bentley Systems.</p>
+                        <div class="card-meta">
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> IIT bombay, Maharashtra</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="news-card">
+                    <div class="card-image">
+                        <div class="card-image-carousel">
+                            <img src="First.jpg" alt="News image1" class="carousel-item active">
+                            <img src="image3.jpg" alt="News image1" class="carousel-item active">
+                            <img src="image4.jpg" alt="News image2" class="carousel-item">
+                            <img src="image4.2.jpg" alt="News image3" class="carousel-item">
+                        </div> 
+                        <span class="card-date">18 NOV 2024</span>   
+                    </div>           
+                    <div class="card-content">
+                        <span class="card-category event">News</span>
+                        <p class="card-excerpt">Organised an International Workshop on Advancing Travel Demand Modeling using Emerging Data Sources, with sessions taken by  Prof. Prateek Bansal (NUS, Singapore), Prof. Amit Agrawal (IIT Roorkee), and Prof. Arnab Jana (IIT Bombay) on 18th November 2024.</p>
+                        <div class="card-meta">
+                            <span class="card-location"><i class="fas fa-map-marker-alt"></i> IIT bombay, Maharashtra</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+                
+            </div>
+        </section>
+    </section>
+   
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3 offset-lg-0">
+                    <img src="iit2.png" alt="" typeof="foaf:Image">
+                </div>
+                
+                <div class="col-12 col-lg-3 offset-lg-6">
+                    <div class="footer__social"><br>
+                            <nav class="nav">
+                                <li></li>
+                                <li class="list-inline-item mx-2">
+                                    <a href="https://www.linkedin.com/in/sangram-nirmale/" target="_blank">
+                                      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="35">
+                                    </a>
+                                  </li>
+
+                                  <li class="list-inline-item mx-1">
+                                    <a href="https://scholar.google.co.in/citations?user=CEZSh60AAAAJ&hl=en" target="_blank">
+                                      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" width="35">
+                                    </a>
+                                  </li>
+                                  
+                                <li class="list-inline-item mx-1">
+                                    <a href="https://www.researchgate.net/profile/Sangram-Nirmale" target="_blank">
+                                      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" width="35">
+                                    </a>
+                                  </li>
+                                 
+
+                                  <li class="list-inline-item mx-1">
+                                    <a href="https://orcid.org/0000-0001-7930-8195" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID" width="35">
+                                    </a>
+                                </li> 
+                            </nav>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel functionality
+        function startCarousel(carousel) {
+            const items = carousel.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
+            
+            setInterval(() => {
+                items[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % items.length;
+                items[currentIndex].classList.add('active');
+            }, 1500); // Change image every 1000ms (1 second)
+        }
+
+        // Initialize all carousels
+        document.querySelectorAll('.card-image-carousel').forEach(carousel => {
+            startCarousel(carousel);
+        });
+    </script>
+
+    <script type="text/javascript" src="custom.js?ver=6.7.2" id="customjs-js"></script>
+</body>
+</html>
